@@ -1,4 +1,4 @@
-// page.tsx - Enhanced LiveKit integration with chat input, camera, and transcripts
+// page.tsx - Enhanced LiveKit integration with proper text streams
 "use client";
 
 import { Button } from "@/components/ui/button";
@@ -16,8 +16,6 @@ import {
   useLocalParticipant,
   VideoTrack,
   useParticipants,
-  Chat,
-  ChatEntry,
 } from '@livekit/components-react';
 import {
   Room,
@@ -33,6 +31,21 @@ import {
 import '@livekit/components-styles';
 import { Mic, MicOff, Video, VideoOff, MessageCircle, Send } from 'lucide-react';
 
+// Message types for better organization
+interface TranscriptMessage {
+  content: string;
+  role: 'user' | 'assistant';
+  timestamp: number;
+  type: 'voice' | 'text';
+}
+
+interface ChatMessage {
+  message: string;
+  from: 'YOU' | 'AGENT';
+  timestamp: number;
+  type: 'chat' | 'voice_transcript';
+}
+
 // LiveKit Room Component
 function MindFlexSession() {
   const room = useRoomContext();
@@ -41,8 +54,8 @@ function MindFlexSession() {
   const { localParticipant } = useLocalParticipant();
   const participants = useParticipants();
   
-  const [messages, setMessages] = useState<Array<{content: string, role: string, timestamp: number}>>([]);
-  const [chatMessages, setChatMessages] = useState<Array<{message: string, from: string, timestamp: number, type?: string}>>([]);
+  const [transcriptMessages, setTranscriptMessages] = useState<TranscriptMessage[]>([]);
+  const [chatMessages, setChatMessages] = useState<ChatMessage[]>([]);
   const [callEnded, setCallEnded] = useState(false);
   const [agentConnected, setAgentConnected] = useState(false);
   const [isCameraEnabled, setIsCameraEnabled] = useState(false);
@@ -52,18 +65,18 @@ function MindFlexSession() {
   
   const { user } = useUser();
   const router = useRouter();
-  const messageContainerRef = useRef<HTMLDivElement>(null);
+  const transcriptContainerRef = useRef<HTMLDivElement>(null);
   const chatContainerRef = useRef<HTMLDivElement>(null);
 
   // Get agent participant
   const agentParticipant = participants.find(p => p.kind === ParticipantKind.AGENT) as RemoteParticipant;
 
-  // Auto-scroll messages
+  // Auto-scroll transcript
   useEffect(() => {
-    if (messageContainerRef.current) {
-      messageContainerRef.current.scrollTop = messageContainerRef.current.scrollHeight;
+    if (transcriptContainerRef.current) {
+      transcriptContainerRef.current.scrollTop = transcriptContainerRef.current.scrollHeight;
     }
-  }, [messages]);
+  }, [transcriptMessages]);
 
   // Auto-scroll chat
   useEffect(() => {
@@ -101,6 +114,7 @@ function MindFlexSession() {
       }
     };
 
+    // Handle data messages (for typed chat)
     const handleDataReceived = (payload: Uint8Array, participant?: Participant, kind?: DataPacket_Kind) => {
       try {
         const message = JSON.parse(new TextDecoder().decode(payload));
@@ -109,30 +123,17 @@ function MindFlexSession() {
         const isAgent = participant?.kind === ParticipantKind.AGENT;
         const sender = isAgent ? 'AGENT' : 'YOU';
         
-        // Handle all messages in the chat - both voice transcripts and typed messages
-        if (message.text || message.content) {
-          const messageContent = message.text || message.content;
+        // Only handle non-transcript data messages here
+        if (message.type === 'chat' || message.type === 'message') {
           setChatMessages(prev => [...prev, {
-            message: messageContent,
+            message: message.text || message.content,
             from: sender,
             timestamp: Date.now(),
-            type: message.type || 'message'
+            type: 'chat'
           }]);
         }
       } catch (error) {
         console.error('Error parsing data:', error);
-        // Handle plain text messages that aren't JSON
-        const textMessage = new TextDecoder().decode(payload);
-        if (textMessage.trim()) {
-          const isAgent = participant?.kind === ParticipantKind.AGENT;
-          const sender = isAgent ? 'AGENT' : 'YOU';
-          setChatMessages(prev => [...prev, {
-            message: textMessage.trim(),
-            from: sender,
-            timestamp: Date.now(),
-            type: 'text'
-          }]);
-        }
       }
     };
 
@@ -156,6 +157,76 @@ function MindFlexSession() {
       room.off(RoomEvent.ConnectionStateChanged, handleConnectionStateChanged);
     };
   }, [room]);
+
+  // Setup text stream handlers for transcriptions
+  useEffect(() => {
+    if (!room) return;
+
+    // Register text stream handler for transcriptions
+    const handleTranscription = async (reader: any, participantInfo: any) => {
+      try {
+        const message = await reader.readAll();
+        // Find the actual participant to check if it's an agent
+        const participant = participants.find(p => p.identity === participantInfo.identity);
+        const isAgent = participant?.kind === ParticipantKind.AGENT;
+        
+        // Add to transcript
+        setTranscriptMessages(prev => [...prev, {
+          content: message,
+          role: isAgent ? 'assistant' : 'user',
+          timestamp: Date.now(),
+          type: 'voice'
+        }]);
+
+        // Also add to chat with voice indicator
+        setChatMessages(prev => [...prev, {
+          message: message,
+          from: isAgent ? 'AGENT' : 'YOU',
+          timestamp: Date.now(),
+          type: 'voice_transcript'
+        }]);
+        
+        console.log(`Transcription from ${participantInfo.identity}: ${message}`);
+      } catch (error) {
+        console.error('Error reading transcription:', error);
+      }
+    };
+
+    // Register text stream handler for chat messages
+    const handleChat = async (reader: any, participantInfo: any) => {
+      try {
+        const message = await reader.readAll();
+        // Find the actual participant to check if it's an agent
+        const participant = participants.find(p => p.identity === participantInfo.identity);
+        const isAgent = participant?.kind === ParticipantKind.AGENT;
+        
+        // Add to chat
+        setChatMessages(prev => [...prev, {
+          message: message,
+          from: isAgent ? 'AGENT' : 'YOU',
+          timestamp: Date.now(),
+          type: 'chat'
+        }]);
+        
+        console.log(`Chat from ${participantInfo.identity}: ${message}`);
+      } catch (error) {
+        console.error('Error reading chat:', error);
+      }
+    };
+
+    // Register the handlers
+    try {
+      room.registerTextStreamHandler('lk.transcription', handleTranscription);
+      room.registerTextStreamHandler('lk.chat', handleChat);
+      console.log('Text stream handlers registered');
+    } catch (error) {
+      console.error('Error registering text stream handlers:', error);
+    }
+
+    return () => {
+      // Cleanup if needed - the handlers are automatically cleaned up when the room disconnects
+    };
+  }, [room, participants]);
 
   const endCall = () => {
     if (room) {
@@ -197,6 +268,12 @@ function MindFlexSession() {
     if (!chatInput.trim() || !room) return;
     
     try {
+      // Send via text stream (lk.chat topic)
+      await room.localParticipant.sendText(chatInput, {
+        topic: 'lk.chat',
+      });
+      
+      // Also send via data channel for compatibility
       const message = {
         text: chatInput,
         type: 'chat',
@@ -205,14 +282,6 @@ function MindFlexSession() {
       
       const encoder = new TextEncoder();
       await room.localParticipant.publishData(encoder.encode(JSON.stringify(message)), { reliable: true });
-      
-      // Add to local chat immediately
-      setChatMessages(prev => [...prev, {
-        message: chatInput,
-        from: 'YOU',
-        timestamp: Date.now(),
-        type: 'chat'
-      }]);
       
       setChatInput('');
     } catch (error) {
@@ -381,11 +450,9 @@ function MindFlexSession() {
                         {msg.from}:
                       </div>
                       <p className="text-foreground break-words">{msg.message}</p>
-                      {msg.type && (
-                        <div className="text-xs text-muted-foreground mt-1">
-                          {msg.type === 'chat' ? '💬' : '🎤'}
-                        </div>
-                      )}
+                      <div className="text-xs text-muted-foreground mt-1">
+                        {msg.type === 'chat' ? '💬' : '🎤'}
+                      </div>
                     </div>
                   ))
                 )}
@@ -417,14 +484,14 @@ function MindFlexSession() {
         </div>
 
         {/* TRANSCRIPT MESSAGES */}
-        {messages.length > 0 && (
+        {transcriptMessages.length > 0 && (
           <div
-            ref={messageContainerRef}
+            ref={transcriptContainerRef}
             className="w-full bg-card/90 backdrop-blur-sm border border-border rounded-xl p-4 mb-8 h-64 overflow-y-auto transition-all duration-300 scroll-smooth"
           >
-            <h3 className="font-semibold mb-4 text-sm text-muted-foreground">Conversation Transcript</h3>
+            <h3 className="font-semibold mb-4 text-sm text-muted-foreground">Voice Conversation Transcript</h3>
             <div className="space-y-3">
-              {messages.map((msg, index) => (
+              {transcriptMessages.map((msg, index) => (
                 <div key={index} className="message-item animate-fadeIn">
                   <div className="font-semibold text-xs text-muted-foreground mb-1">
                     {msg.role === "assistant" ? "MindFlex" : "You"}:
@@ -485,7 +552,7 @@ function MindFlexSession() {
   );
 }
 
-// Main Component with LiveKit Room wrapper (unchanged)
+// Main Component with LiveKit Room wrapper
 const GenerateProgramPage = () => {
   const [token, setToken] = useState('');
   const [wsUrl, setWsUrl] = useState('');
@@ -547,7 +614,7 @@ const GenerateProgramPage = () => {
 
   return (
     <LiveKitRoom
-      video={true}  // Enable video
+      video={true}
       audio={true}
       token={token}
       serverUrl={wsUrl}
