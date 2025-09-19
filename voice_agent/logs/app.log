@@ -1,0 +1,792 @@
+DEBUG:asyncio:Using proactor: IocpProactor
+DEV:livekit.agents:Watching C:\Users\User\Mindflex2\voice_agent
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:livekit.agents:starting worker
+INFO:livekit.agents:registered worker
+INFO:livekit.agents:received job request
+INFO:livekit.agents:initializing job runner
+INFO:livekit.agents:job runner initialized
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.plugins.google:connecting to Gemini Realtime API...
+DEBUG:livekit.agents:start reading stream
+DEBUG:livekit.agents:using audio io: `RoomIO` -> `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using transcript io: `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using video io: `RoomIO` > `AgentSession` > (none)
+INFO:google_genai.live:b'{\n  "setupComplete": {}\n}\n'
+INFO:root:USER(None): . (lang=None, final=False)
+INFO:root:USER(None): . (lang=None, final=True)
+INFO:root:USER(None): Um (lang=None, final=False)
+INFO:root:USER(None): Um, (lang=None, final=False)
+INFO:root:USER(None): Um, fee (lang=None, final=False)
+INFO:root:USER(None): Um, feeling (lang=None, final=False)
+INFO:root:USER(None): Um, feeling a (lang=None, final=False)
+INFO:root:USER(None): Um, feeling a bit (lang=None, final=False)
+INFO:root:USER(None): Um, feeling a bit stressed out. (lang=None, final=False)
+INFO:root:USER(None): Um, feeling a bit stressed out. (lang=None, final=True)
+INFO:root:USER(None): wal (lang=None, final=False)
+INFO:root:USER(None): walking on an application (lang=None, final=False)
+INFO:root:USER(None): walking on an application (lang=None, final=True)
+WARNING:livekit.plugins.google:truncate is not supported by the Google Realtime API.
+INFO:root:USER(None): thing (lang=None, final=False)
+INFO:root:USER(None): things (lang=None, final=False)
+INFO:root:USER(None): things aren't really going over it. (lang=None, final=False)
+INFO:root:USER(None): things aren't really going over it. (lang=None, final=True)
+INFO:root:USER(None): Um, yes. (lang=None, final=False)
+INFO:root:USER(None): Um, yes. (lang=None, final=True)
+INFO:root:USER(None): AL (lang=None, final=False)
+INFO:root:USER(None): ALLO (lang=None, final=False)
+INFO:root:USER(None): ALLOW TO (lang=None, final=False)
+INFO:root:USER(None): ALLOW TO EX (lang=None, final=False)
+INFO:root:USER(None): ALLOW TO EXPLORE SOME STRATEGIES. (lang=None, final=False)
+INFO:root:USER(None): ALLOW TO EXPLORE SOME STRATEGIES. (lang=None, final=True)
+DEBUG:livekit.agents:stream closed
+INFO:livekit.agents:closing agent session due to participant disconnect (disable via `RoomInputOptions.close_on_disconnect=False`)
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.plugins.google:send task finished.
+DEBUG:livekit.agents:session closed
+DEBUG:livekit.agents:shutting down job task
+DEBUG:livekit.agents:job exiting
+WARNING:livekit:livekit::rtc_engine:453:livekit::rtc_engine - received session close: "signal client closed: \"stream closed\"" UnknownReason Resume
+DEBUG:livekit.agents:http_session(): closing the httpclient ctx
+DEBUG:livekit.agents:http_session(): creating a new httpclient ctx
+INFO:livekit.agents:received job request
+INFO:livekit.agents:initializing job runner
+INFO:livekit.agents:job runner initialized
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.plugins.google:connecting to Gemini Realtime API...
+DEBUG:livekit.agents:start reading stream
+DEBUG:livekit.agents:using audio io: `RoomIO` -> `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using transcript io: `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using video io: `RoomIO` > `AgentSession` > (none)
+INFO:google_genai.live:b'{\n  "setupComplete": {}\n}\n'
+INFO:root:Received data: {'text': 'Hi', 'type': 'chat', 'timestamp': 1756646002515}
+INFO:root:User typed: Hi
+ERROR:livekit.agents:Error in _realtime_reply_task
+Traceback (most recent call last):
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\utils\log.py", line 16, in async_fn_logs
+    return await fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\voice\agent_activity.py", line 1775, in _realtime_reply_task
+    generation_ev = await self._rt_session.generate_reply(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+livekit.agents.llm.realtime.RealtimeError: generate_reply timed out waiting for generation_created event.
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='AgentActivity.realtime_reply' coro=<AgentActivity._realtime_reply_task() done, defined at C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\utils\log.py:13> exception=RealtimeError('generate_reply timed out waiting for generation_created event.')>
+Traceback (most recent call last):
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\utils\log.py", line 16, in async_fn_logs
+    return await fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\voice\agent_activity.py", line 1775, in _realtime_reply_task
+    generation_ev = await self._rt_session.generate_reply(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+livekit.agents.llm.realtime.RealtimeError: generate_reply timed out waiting for generation_created event.
+INFO:root:Received data: {'text': 'I am good, you?', 'type': 'chat', 'timestamp': 1756646024546}
+INFO:root:User typed: I am good, you?
+DEBUG:livekit.agents:stream closed
+INFO:livekit.agents:closing agent session due to participant disconnect (disable via `RoomInputOptions.close_on_disconnect=False`)
+WARNING:livekit.plugins.google:truncate is not supported by the Google Realtime API.
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.plugins.google:send task finished.
+DEBUG:livekit.agents:session closed
+INFO:livekit.agents:shutting down worker
+DEBUG:livekit.agents:shutting down job task
+DEBUG:livekit.agents:job exiting
+DEBUG:livekit.agents:http_session(): closing the httpclient ctx
+DEBUG:livekit.agents:http_session(): creating a new httpclient ctx
+DEBUG:asyncio:Using proactor: IocpProactor
+DEV:livekit.agents:Watching C:\Users\User\Mindflex2\voice_agent
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:livekit.agents:starting worker
+INFO:livekit.agents:registered worker
+INFO:livekit.agents:shutting down worker
+DEBUG:asyncio:Using proactor: IocpProactor
+DEV:livekit.agents:Watching C:\Users\User\Mindflex2\voice_agent
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:livekit.agents:starting worker
+INFO:livekit.agents:registered worker
+INFO:livekit.agents:received job request
+INFO:livekit.agents:initializing job runner
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:livekit.agents:job runner initialized
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.plugins.google:connecting to Gemini Realtime API...
+DEBUG:livekit.agents:using audio io: `RoomIO` -> `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using transcript io: `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using video io: `RoomIO` > `AgentSession` > (none)
+DEBUG:livekit.agents:start reading stream
+INFO:google_genai.live:b'{\n  "setupComplete": {}\n}\n'
+INFO:root:Received data: {'text': 'Hi, I am goo, you?', 'type': 'chat', 'timestamp': 1756646280730}
+INFO:root:User typed: Hi, I am goo, you?
+INFO:root:Received data: {'text': 'I am abit anxious.', 'type': 'chat', 'timestamp': 1756646310538}
+INFO:root:User typed: I am abit anxious.
+INFO:root:Received data: {'text': 'I am working on an application rn', 'type': 'chat', 'timestamp': 1756646335650}
+INFO:root:User typed: I am working on an application rn
+INFO:livekit.agents:closing agent session due to participant disconnect (disable via `RoomInputOptions.close_on_disconnect=False`)
+DEBUG:livekit.agents:stream closed
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.plugins.google:send task finished.
+DEBUG:livekit.agents:session closed
+INFO:livekit.agents:shutting down worker
+DEBUG:livekit.agents:shutting down job task
+DEBUG:livekit.agents:job exiting
+DEBUG:livekit.agents:http_session(): closing the httpclient ctx
+DEBUG:livekit.agents:http_session(): creating a new httpclient ctx
+DEBUG:asyncio:Using proactor: IocpProactor
+DEV:livekit.agents:Watching C:\Users\User\Mindflex2\voice_agent
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:livekit.agents:starting worker
+INFO:livekit.agents:registered worker
+WARNING:livekit.agents:failed to connect to livekit, retrying in 0s
+Traceback (most recent call last):
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\worker.py", line 689, in _connection_task
+    await self._run_ws(ws)
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\worker.py", line 770, in _run_ws
+    await asyncio.gather(*tasks)
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\worker.py", line 742, in _recv_task
+    raise Exception("worker connection closed unexpectedly")
+Exception: worker connection closed unexpectedly
+WARNING:livekit.agents:failed to connect to livekit, retrying in 2s
+Traceback (most recent call last):
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\aiohttp\connector.py", line 1532, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\aiohttp\connector.py", line 1148, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\aiohttp\connector.py", line 1179, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\aiohttp\resolver.py", line 40, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 901, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\socket.py", line 964, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\worker.py", line 649, in _connection_task
+    ws = await self._http_session.ws_connect(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\aiohttp\client.py", line 1067, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\aiohttp\client.py", line 770, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\aiohttp\client.py", line 725, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\aiohttp\connector.py", line 642, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\aiohttp\connector.py", line 1209, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\aiohttp\connector.py", line 1538, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host mindflex-xawp7he1.livekit.cloud:443 ssl:default [getaddrinfo failed]
+WARNING:livekit.agents:failed to connect to livekit, retrying in 4s
+Traceback (most recent call last):
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\aiohttp\connector.py", line 1532, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\aiohttp\connector.py", line 1148, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\aiohttp\connector.py", line 1179, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\aiohttp\resolver.py", line 40, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 901, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\socket.py", line 964, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\worker.py", line 649, in _connection_task
+    ws = await self._http_session.ws_connect(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\aiohttp\client.py", line 1067, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\aiohttp\client.py", line 770, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\aiohttp\client.py", line 725, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\aiohttp\connector.py", line 642, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\aiohttp\connector.py", line 1209, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\aiohttp\connector.py", line 1538, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host mindflex-xawp7he1.livekit.cloud:443 ssl:default [getaddrinfo failed]
+WARNING:livekit.agents:failed to connect to livekit, retrying in 6s
+Traceback (most recent call last):
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\aiohttp\connector.py", line 1532, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\aiohttp\connector.py", line 1148, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\aiohttp\connector.py", line 1179, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\aiohttp\resolver.py", line 40, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 901, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\socket.py", line 964, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\worker.py", line 649, in _connection_task
+    ws = await self._http_session.ws_connect(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\aiohttp\client.py", line 1067, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\aiohttp\client.py", line 770, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\aiohttp\client.py", line 725, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\aiohttp\connector.py", line 642, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\aiohttp\connector.py", line 1209, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\aiohttp\connector.py", line 1538, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host mindflex-xawp7he1.livekit.cloud:443 ssl:default [getaddrinfo failed]
+INFO:livekit.agents:registered worker
+INFO:livekit.agents:received job request
+INFO:livekit.agents:received job request
+INFO:livekit.agents:received job request
+INFO:livekit.agents:initializing job runner
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:livekit.agents:job runner initialized
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.plugins.google:connecting to Gemini Realtime API...
+DEBUG:livekit.agents:using audio io: `RoomIO` -> `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using transcript io: `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using video io: `RoomIO` > `AgentSession` > (none)
+DEBUG:livekit.agents:start reading stream
+WARNING:livekit.agents:assignment for job AJ_KRs6i6xWkfWT timed out
+ERROR:livekit.agents:job_request_fnc failed
+Traceback (most recent call last):
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\worker.py", line 886, in _job_request_task
+    await self._opts.request_fnc(job_req)
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\worker.py", line 69, in _default_request_fnc
+    await ctx.accept()
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\job.py", line 548, in accept
+    await self._on_accept(accept_arguments)
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\worker.py", line 857, in _on_accept
+    raise AssignmentTimeoutError() from None
+livekit.agents._exceptions.AssignmentTimeoutError
+INFO:google_genai.live:b'{\n  "setupComplete": {}\n}\n'
+WARNING:livekit.agents:assignment for job AJ_KRs6i6xWkfWT timed out
+ERROR:livekit.agents:job_request_fnc failed
+Traceback (most recent call last):
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\worker.py", line 886, in _job_request_task
+    await self._opts.request_fnc(job_req)
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\worker.py", line 69, in _default_request_fnc
+    await ctx.accept()
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\job.py", line 548, in accept
+    await self._on_accept(accept_arguments)
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\worker.py", line 857, in _on_accept
+    raise AssignmentTimeoutError() from None
+livekit.agents._exceptions.AssignmentTimeoutError
+INFO:root:Received data: {'text': 'Hi.', 'type': 'chat', 'timestamp': 1757798456287}
+INFO:root:User typed: Hi.
+INFO:root:Received data: {'text': 'I am good.', 'type': 'chat', 'timestamp': 1757798472301}
+INFO:root:User typed: I am good.
+INFO:root:Received data: {'text': 'No, not exactly.', 'type': 'chat', 'timestamp': 1757798489569}
+INFO:root:User typed: No, not exactly.
+DEBUG:livekit.agents:stream closed
+INFO:livekit.agents:closing agent session due to participant disconnect (disable via `RoomInputOptions.close_on_disconnect=False`)
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.plugins.google:send task finished.
+DEBUG:livekit.agents:session closed
+INFO:livekit.agents:received job request
+INFO:livekit.agents:received job request
+INFO:livekit.agents:received job request
+WARNING:livekit.agents:assignment for job AJ_AHUZDetGZF3h timed out
+ERROR:livekit.agents:job_request_fnc failed
+Traceback (most recent call last):
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\worker.py", line 886, in _job_request_task
+    await self._opts.request_fnc(job_req)
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\worker.py", line 69, in _default_request_fnc
+    await ctx.accept()
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\job.py", line 548, in accept
+    await self._on_accept(accept_arguments)
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\worker.py", line 857, in _on_accept
+    raise AssignmentTimeoutError() from None
+livekit.agents._exceptions.AssignmentTimeoutError
+WARNING:livekit.agents:assignment for job AJ_AHUZDetGZF3h timed out
+ERROR:livekit.agents:job_request_fnc failed
+Traceback (most recent call last):
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\worker.py", line 886, in _job_request_task
+    await self._opts.request_fnc(job_req)
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\worker.py", line 69, in _default_request_fnc
+    await ctx.accept()
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\job.py", line 548, in accept
+    await self._on_accept(accept_arguments)
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\worker.py", line 857, in _on_accept
+    raise AssignmentTimeoutError() from None
+livekit.agents._exceptions.AssignmentTimeoutError
+WARNING:livekit.agents:assignment for job AJ_AHUZDetGZF3h timed out
+ERROR:livekit.agents:job_request_fnc failed
+Traceback (most recent call last):
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\worker.py", line 886, in _job_request_task
+    await self._opts.request_fnc(job_req)
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\worker.py", line 69, in _default_request_fnc
+    await ctx.accept()
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\job.py", line 548, in accept
+    await self._on_accept(accept_arguments)
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\worker.py", line 857, in _on_accept
+    raise AssignmentTimeoutError() from None
+livekit.agents._exceptions.AssignmentTimeoutError
+INFO:livekit.agents:received job request
+INFO:livekit.agents:initializing job runner
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:livekit.agents:job runner initialized
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.plugins.google:connecting to Gemini Realtime API...
+DEBUG:livekit.agents:using audio io: `RoomIO` -> `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using transcript io: `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using video io: `RoomIO` > `AgentSession` > (none)
+DEBUG:livekit.agents:start reading stream
+INFO:google_genai.live:b'{\n  "setupComplete": {}\n}\n'
+INFO:livekit.agents:closing agent session due to participant disconnect (disable via `RoomInputOptions.close_on_disconnect=False`)
+DEBUG:livekit.agents:stream closed
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.plugins.google:send task finished.
+DEBUG:livekit.agents:session closed
+DEBUG:livekit.agents:shutting down job task
+WARNING:livekit:livekit::rtc_engine:453:livekit::rtc_engine - received session close: "signal client closed: \"stream closed\"" UnknownReason Resume
+DEBUG:livekit.agents:job exiting
+DEBUG:livekit.agents:http_session(): closing the httpclient ctx
+DEBUG:livekit.agents:http_session(): creating a new httpclient ctx
+INFO:livekit.agents:shutting down worker
+DEBUG:livekit.agents:shutting down job task
+DEBUG:livekit.agents:job exiting
+DEBUG:livekit.agents:http_session(): closing the httpclient ctx
+DEBUG:livekit.agents:http_session(): creating a new httpclient ctx
+DEBUG:asyncio:Using proactor: IocpProactor
+DEV:livekit.agents:Watching C:\Users\User\Mindflex2\voice_agent
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:livekit.agents:starting worker
+INFO:livekit.agents:registered worker
+INFO:livekit.agents:shutting down worker
+DEBUG:asyncio:Using proactor: IocpProactor
+DEV:livekit.agents:Watching C:\Users\User\Mindflex2\voice_agent
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:livekit.agents:starting worker
+INFO:livekit.agents:registered worker
+INFO:livekit.agents:received job request
+INFO:livekit.agents:received job request
+INFO:livekit.agents:received job request
+INFO:livekit.agents:initializing job runner
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:livekit.agents:job runner initialized
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.plugins.google:connecting to Gemini Realtime API...
+DEBUG:livekit.agents:start reading stream
+DEBUG:livekit.agents:using audio io: `RoomIO` -> `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using transcript io: `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using video io: `RoomIO` > `AgentSession` > (none)
+INFO:google_genai.live:b'{\n  "setupComplete": {}\n}\n'
+WARNING:livekit.agents:assignment for job AJ_Hfd4hnRUwUMV timed out
+ERROR:livekit.agents:job_request_fnc failed
+Traceback (most recent call last):
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\worker.py", line 886, in _job_request_task
+    await self._opts.request_fnc(job_req)
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\worker.py", line 69, in _default_request_fnc
+    await ctx.accept()
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\job.py", line 548, in accept
+    await self._on_accept(accept_arguments)
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\worker.py", line 857, in _on_accept
+    raise AssignmentTimeoutError() from None
+livekit.agents._exceptions.AssignmentTimeoutError
+WARNING:livekit.agents:assignment for job AJ_Hfd4hnRUwUMV timed out
+ERROR:livekit.agents:job_request_fnc failed
+Traceback (most recent call last):
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\worker.py", line 886, in _job_request_task
+    await self._opts.request_fnc(job_req)
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\worker.py", line 69, in _default_request_fnc
+    await ctx.accept()
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\job.py", line 548, in accept
+    await self._on_accept(accept_arguments)
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\worker.py", line 857, in _on_accept
+    raise AssignmentTimeoutError() from None
+livekit.agents._exceptions.AssignmentTimeoutError
+DEBUG:livekit.agents:stream closed
+INFO:livekit.agents:closing agent session due to participant disconnect (disable via `RoomInputOptions.close_on_disconnect=False`)
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.plugins.google:send task finished.
+DEBUG:livekit.agents:session closed
+INFO:livekit.agents:received job request
+INFO:livekit.agents:received job request
+INFO:livekit.agents:initializing job runner
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:livekit.agents:job runner initialized
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.agents:shutting down job task
+WARNING:livekit:livekit::rtc_engine:453:livekit::rtc_engine - received session close: "signal client closed: \"stream closed\"" UnknownReason Resume
+DEBUG:livekit.agents:job exiting
+DEBUG:livekit.agents:http_session(): closing the httpclient ctx
+DEBUG:livekit.agents:http_session(): creating a new httpclient ctx
+DEBUG:livekit.plugins.google:connecting to Gemini Realtime API...
+DEBUG:livekit.agents:using audio io: `RoomIO` -> `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using transcript io: `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using video io: `RoomIO` > `AgentSession` > (none)
+DEBUG:livekit.agents:start reading stream
+INFO:google_genai.live:b'{\n  "setupComplete": {}\n}\n'
+WARNING:livekit.agents:assignment for job AJ_vi5hmEvg3HXm timed out
+ERROR:livekit.agents:job_request_fnc failed
+Traceback (most recent call last):
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\worker.py", line 886, in _job_request_task
+    await self._opts.request_fnc(job_req)
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\worker.py", line 69, in _default_request_fnc
+    await ctx.accept()
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\job.py", line 548, in accept
+    await self._on_accept(accept_arguments)
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\worker.py", line 857, in _on_accept
+    raise AssignmentTimeoutError() from None
+livekit.agents._exceptions.AssignmentTimeoutError
+INFO:livekit.agents:closing agent session due to participant disconnect (disable via `RoomInputOptions.close_on_disconnect=False`)
+DEBUG:livekit.agents:stream closed
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.plugins.google:send task finished.
+DEBUG:livekit.agents:session closed
+DEBUG:livekit.agents:shutting down job task
+WARNING:livekit:livekit::rtc_engine:453:livekit::rtc_engine - received session close: "signal client closed: \"stream closed\"" UnknownReason Resume
+DEBUG:livekit.agents:job exiting
+DEBUG:livekit.agents:http_session(): closing the httpclient ctx
+DEBUG:livekit.agents:http_session(): creating a new httpclient ctx
+INFO:livekit.agents:received job request
+INFO:livekit.agents:initializing job runner
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:livekit.agents:job runner initialized
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.plugins.google:connecting to Gemini Realtime API...
+DEBUG:livekit.agents:using audio io: `RoomIO` -> `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using transcript io: `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using video io: `RoomIO` > `AgentSession` > (none)
+DEBUG:livekit.agents:start reading stream
+INFO:google_genai.live:b'{\n  "setupComplete": {}\n}\n'
+INFO:livekit.agents:closing agent session due to participant disconnect (disable via `RoomInputOptions.close_on_disconnect=False`)
+DEBUG:livekit.agents:stream closed
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.plugins.google:send task finished.
+DEBUG:livekit.agents:session closed
+WARNING:livekit:livekit::rtc_engine:453:livekit::rtc_engine - received session close: "signal client closed: \"stream closed\"" UnknownReason Resume
+DEBUG:livekit.agents:shutting down job task
+DEBUG:livekit.agents:job exiting
+DEBUG:livekit.agents:http_session(): closing the httpclient ctx
+DEBUG:livekit.agents:http_session(): creating a new httpclient ctx
+INFO:livekit.agents:received job request
+INFO:livekit.agents:initializing job runner
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:livekit.agents:job runner initialized
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.plugins.google:connecting to Gemini Realtime API...
+DEBUG:livekit.agents:using audio io: `RoomIO` -> `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using transcript io: `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using video io: `RoomIO` > `AgentSession` > (none)
+DEBUG:livekit.agents:start reading stream
+INFO:livekit.agents:closing agent session due to participant disconnect (disable via `RoomInputOptions.close_on_disconnect=False`)
+DEBUG:livekit.agents:stream closed
+INFO:google_genai.live:b'{\n  "setupComplete": {}\n}\n'
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.plugins.google:send task finished.
+DEBUG:livekit.agents:session closed
+WARNING:livekit:livekit::rtc_engine:453:livekit::rtc_engine - received session close: "signal client closed: \"stream closed\"" UnknownReason Resume
+DEBUG:livekit.agents:shutting down job task
+DEBUG:livekit.agents:http_session(): closing the httpclient ctx
+DEBUG:livekit.agents:job exiting
+DEBUG:livekit.agents:http_session(): creating a new httpclient ctx
+INFO:livekit.agents:shutting down worker
+DEBUG:asyncio:Using proactor: IocpProactor
+DEV:livekit.agents:Watching C:\Users\User\Mindflex2\voice_agent
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:livekit.agents:starting worker
+INFO:livekit.agents:registered worker
+INFO:livekit.agents:received job request
+INFO:livekit.agents:initializing job runner
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:livekit.agents:job runner initialized
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.plugins.google:connecting to Gemini Realtime API...
+DEBUG:livekit.agents:start reading stream
+DEBUG:livekit.agents:using audio io: `RoomIO` -> `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using transcript io: `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using video io: `RoomIO` > `AgentSession` > (none)
+INFO:google_genai.live:b'{\n  "setupComplete": {}\n}\n'
+DEBUG:livekit.agents:stream closed
+INFO:livekit.agents:closing agent session due to participant disconnect (disable via `RoomInputOptions.close_on_disconnect=False`)
+WARNING:livekit.plugins.google:truncate is not supported by the Google Realtime API.
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.plugins.google:send task finished.
+DEBUG:livekit.agents:session closed
+INFO:livekit.agents:received job request
+INFO:livekit.agents:initializing job runner
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:livekit.agents:job runner initialized
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.agents:input stream attached
+WARNING:livekit.agents:Running <Task finished name='Task-120' coro=<AgentSession._update_activity() done, defined at C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\voice\agent_session.py:806> result=None> took too long: 2.16 seconds
+DEBUG:livekit.plugins.google:connecting to Gemini Realtime API...
+DEBUG:livekit.agents:using audio io: `RoomIO` -> `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using transcript io: `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using video io: `RoomIO` > `AgentSession` > (none)
+DEBUG:livekit.agents:start reading stream
+DEBUG:livekit.agents:shutting down job task
+DEBUG:livekit.agents:job exiting
+DEBUG:livekit.agents:http_session(): closing the httpclient ctx
+DEBUG:livekit.agents:http_session(): creating a new httpclient ctx
+INFO:google_genai.live:b'{\n  "setupComplete": {}\n}\n'
+DEBUG:livekit.agents:stream closed
+INFO:livekit.agents:closing agent session due to participant disconnect (disable via `RoomInputOptions.close_on_disconnect=False`)
+WARNING:livekit.plugins.google:truncate is not supported by the Google Realtime API.
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.agents:input stream detached
+WARNING:livekit.agents:rotate_segment called while previous segment is still being rotated
+DEBUG:livekit.plugins.google:send task finished.
+DEBUG:livekit.agents:session closed
+DEBUG:livekit.agents:shutting down job task
+WARNING:livekit:livekit::rtc_engine:453:livekit::rtc_engine - received session close: "signal client closed: \"stream closed\"" UnknownReason Resume
+DEBUG:livekit.agents:job exiting
+DEBUG:livekit.agents:http_session(): closing the httpclient ctx
+DEBUG:livekit.agents:http_session(): creating a new httpclient ctx
+INFO:livekit.agents:received job request
+INFO:livekit.agents:initializing job runner
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:livekit.agents:job runner initialized
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.plugins.google:connecting to Gemini Realtime API...
+DEBUG:livekit.agents:using audio io: `RoomIO` -> `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using transcript io: `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using video io: `RoomIO` > `AgentSession` > (none)
+DEBUG:livekit.agents:start reading stream
+INFO:google_genai.live:b'{\n  "setupComplete": {}\n}\n'
+DEBUG:livekit.agents:stream closed
+INFO:livekit.agents:closing agent session due to participant disconnect (disable via `RoomInputOptions.close_on_disconnect=False`)
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.plugins.google:send task finished.
+DEBUG:livekit.agents:session closed
+INFO:livekit.agents:received job request
+INFO:livekit.agents:initializing job runner
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:livekit.agents:job runner initialized
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.plugins.google:connecting to Gemini Realtime API...
+DEBUG:livekit.agents:using audio io: `RoomIO` -> `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using transcript io: `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using video io: `RoomIO` > `AgentSession` > (none)
+DEBUG:livekit.agents:start reading stream
+INFO:google_genai.live:b'{\n  "setupComplete": {}\n}\n'
+INFO:livekit.agents:closing agent session due to participant disconnect (disable via `RoomInputOptions.close_on_disconnect=False`)
+DEBUG:livekit.agents:stream closed
+WARNING:livekit.plugins.google:truncate is not supported by the Google Realtime API.
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.plugins.google:send task finished.
+DEBUG:livekit.agents:session closed
+WARNING:livekit:livekit::rtc_engine:453:livekit::rtc_engine - received session close: "signal client closed: \"stream closed\"" UnknownReason Resume
+DEBUG:livekit.agents:shutting down job task
+DEBUG:livekit.agents:job exiting
+DEBUG:livekit.agents:http_session(): closing the httpclient ctx
+DEBUG:livekit.agents:http_session(): creating a new httpclient ctx
+WARNING:livekit:livekit::rtc_engine:453:livekit::rtc_engine - received session close: "signal client closed: \"stream closed\"" UnknownReason Resume
+DEBUG:livekit.agents:shutting down job task
+DEBUG:livekit.agents:job exiting
+DEBUG:livekit.agents:http_session(): closing the httpclient ctx
+DEBUG:livekit.agents:http_session(): creating a new httpclient ctx
+INFO:livekit.agents:shutting down worker
+DEBUG:asyncio:Using proactor: IocpProactor
+DEV:livekit.agents:Watching C:\Users\User\Mindflex2\voice_agent
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:livekit.agents:starting worker
+INFO:livekit.agents:registered worker
+INFO:livekit.agents:received job request
+INFO:livekit.agents:initializing job runner
+INFO:livekit.agents:job runner initialized
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.plugins.google:connecting to Gemini Realtime API...
+DEBUG:livekit.agents:using audio io: `RoomIO` -> `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using transcript io: `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using video io: `RoomIO` > `AgentSession` > (none)
+INFO:google_genai.live:b'{\n  "setupComplete": {}\n}\n'
+DEBUG:livekit.agents:start reading stream
+DEBUG:livekit.agents:stream closed
+INFO:livekit.agents:closing agent session due to participant disconnect (disable via `RoomInputOptions.close_on_disconnect=False`)
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.plugins.google:send task finished.
+DEBUG:livekit.agents:session closed
+INFO:livekit.agents:received job request
+INFO:livekit.agents:initializing job runner
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:livekit.agents:job runner initialized
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.plugins.google:connecting to Gemini Realtime API...
+DEBUG:livekit.agents:using audio io: `RoomIO` -> `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using transcript io: `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using video io: `RoomIO` > `AgentSession` > (none)
+DEBUG:livekit.agents:start reading stream
+INFO:google_genai.live:b'{\n  "setupComplete": {}\n}\n'
+DEBUG:livekit.agents:start reading stream
+DEBUG:livekit.agents:shutting down job task
+DEBUG:livekit.agents:job exiting
+DEBUG:livekit.agents:http_session(): closing the httpclient ctx
+DEBUG:livekit.agents:http_session(): creating a new httpclient ctx
+INFO:root:Received data: {'id': 'bf3fbf38-d3cd-4349-9c21-fd9ca542efe8', 'timestamp': 1758217182437, 'message': 'hi', 'ignoreLegacy': True}
+WARNING:livekit.agents:Running <Task pending name='Task-160' coro=<VADStream._main_task() running at C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\utils\log.py:16> wait_for=<Future pending cb=[_chain_future.<locals>._call_check_cancel() at C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\asyncio\futures.py:387, Task.task_wakeup()]> cb=[VADStream.__init__.<locals>.<lambda>() at C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\vad.py:105, VADStream.__init__.<locals>.<lambda>() at C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\plugins\silero\vad.py:211]> took too long: 486.55 seconds
+WARNING:livekit.agents:unexpected message type: 258
+WARNING:livekit.agents:failed to connect to livekit, retrying in 0s
+Traceback (most recent call last):
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\worker.py", line 689, in _connection_task
+    await self._run_ws(ws)
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\worker.py", line 770, in _run_ws
+    await asyncio.gather(*tasks)
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\worker.py", line 742, in _recv_task
+    raise Exception("worker connection closed unexpectedly")
+Exception: worker connection closed unexpectedly
+ERROR:livekit.plugins.google:error in receive task: sent 1011 (internal error) keepalive ping timeout; no close frame received
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\asyncio\windows_events.py", line 462, in finish_socket_func
+    return ov.getresult()
+           ^^^^^^^^^^^^^^
+OSError: [WinError 64] The specified network name is no longer available
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\asyncio\proactor_events.py", line 386, in _loop_writing
+    f.result()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\asyncio\windows_events.py", line 803, in _poll
+    value = callback(transferred, key, ov)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\asyncio\windows_events.py", line 466, in finish_socket_func
+    raise ConnectionResetError(*exc.args)
+ConnectionResetError: [WinError 64] The specified network name is no longer available
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\plugins\google\beta\realtime\realtime_api.py", line 703, in _recv_task
+    async for response in session.receive():
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\google\genai\live.py", line 443, in receive
+    while result := await self._receive():
+                    ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\google\genai\live.py", line 524, in _receive
+    raw_response = await self._ws.recv(decode=False)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\websockets\asyncio\connection.py", line 322, in recv
+    raise self.protocol.close_exc from self.recv_exc
+websockets.exceptions.ConnectionClosedError: sent 1011 (internal error) keepalive ping timeout; no close frame received
+ERROR:livekit:livekit_api::signal_client:369:livekit_api::signal_client - failed to send queued signal: failed to send message to the server
+DEBUG:livekit.plugins.google:send task finished.
+ERROR:livekit:livekit_api::signal_client::signal_stream:413:livekit_api::signal_client::signal_stream - unhandled websocket message Err(Io(Os { code: 10054, kind: ConnectionReset, message: "An existing connection was forcibly closed by the remote host." }))
+WARNING:livekit.plugins.silero:inference is slower than realtime
+WARNING:livekit:livekit::rtc_engine:453:livekit::rtc_engine - received session close: "signal client closed: \"ping timeout\"" UnknownReason Resume
+DEBUG:livekit.plugins.google:connecting to Gemini Realtime API...
+ERROR:livekit:livekit::rtc_engine::rtc_session:787:livekit::rtc_engine::rtc_session - Subscriber pc state failed
+WARNING:livekit:livekit::rtc_engine:453:livekit::rtc_engine - received session close: "pc_state failed" UnknownReason Resume
+ERROR:livekit:livekit::rtc_engine::rtc_session:787:livekit::rtc_engine::rtc_session - Publisher pc state failed
+WARNING:livekit:livekit::rtc_engine:453:livekit::rtc_engine - received session close: "pc_state failed" UnknownReason Resume
+ERROR:livekit:livekit::rtc_engine:729:livekit::rtc_engine - resuming connection... attempt: 0
+INFO:livekit.agents:registered worker
+ERROR:livekit:livekit::rtc_engine:731:livekit::rtc_engine - resuming connection failed: signal failure: ws failure: HTTP error: 401 Unauthorized
+INFO:google_genai.live:b'{\n  "setupComplete": {}\n}\n'
+ERROR:livekit:livekit::rtc_engine:729:livekit::rtc_engine - resuming connection... attempt: 1
+ERROR:livekit:livekit::rtc_engine:731:livekit::rtc_engine - resuming connection failed: signal failure: ws failure: HTTP error: 401 Unauthorized
+ERROR:livekit:livekit::rtc_engine:729:livekit::rtc_engine - resuming connection... attempt: 2
+ERROR:livekit:livekit::rtc_engine:731:livekit::rtc_engine - resuming connection failed: signal failure: ws failure: HTTP error: 401 Unauthorized
+ERROR:livekit:livekit::rtc_engine:729:livekit::rtc_engine - resuming connection... attempt: 3
+ERROR:livekit:livekit::rtc_engine:731:livekit::rtc_engine - resuming connection failed: signal failure: ws failure: HTTP error: 401 Unauthorized
+ERROR:livekit:livekit::rtc_engine:729:livekit::rtc_engine - resuming connection... attempt: 4
+ERROR:livekit:livekit::rtc_engine:731:livekit::rtc_engine - resuming connection failed: signal failure: ws failure: HTTP error: 401 Unauthorized
+ERROR:livekit:livekit::rtc_engine:729:livekit::rtc_engine - resuming connection... attempt: 5
+ERROR:livekit:livekit::rtc_engine:731:livekit::rtc_engine - resuming connection failed: signal failure: ws failure: HTTP error: 401 Unauthorized
+ERROR:livekit:livekit::rtc_engine:729:livekit::rtc_engine - resuming connection... attempt: 6
+ERROR:livekit:livekit::rtc_engine:731:livekit::rtc_engine - resuming connection failed: signal failure: ws failure: HTTP error: 401 Unauthorized
+ERROR:livekit:livekit::rtc_engine:729:livekit::rtc_engine - resuming connection... attempt: 7
+ERROR:livekit:livekit::rtc_engine:731:livekit::rtc_engine - resuming connection failed: signal failure: ws failure: HTTP error: 401 Unauthorized
+ERROR:livekit:livekit::rtc_engine:729:livekit::rtc_engine - resuming connection... attempt: 8
+ERROR:livekit:livekit::rtc_engine:731:livekit::rtc_engine - resuming connection failed: signal failure: ws failure: HTTP error: 401 Unauthorized
+ERROR:livekit:livekit::rtc_engine:729:livekit::rtc_engine - resuming connection... attempt: 9
+ERROR:livekit:livekit::rtc_engine:731:livekit::rtc_engine - resuming connection failed: signal failure: ws failure: HTTP error: 401 Unauthorized
+ERROR:livekit:livekit::rtc_engine:663:livekit::rtc_engine - failed to reconnect to the livekit room
+DEBUG:livekit.agents:shutting down job task
+DEBUG:livekit.agents:job exiting
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.plugins.google:send task finished.
+DEBUG:livekit.agents:stream closed
+DEBUG:livekit.agents:session closed
+DEBUG:livekit.agents:http_session(): closing the httpclient ctx
+DEBUG:livekit.agents:http_session(): creating a new httpclient ctx

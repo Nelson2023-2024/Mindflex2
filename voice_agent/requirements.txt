@@ -1,0 +1,4 @@
+livekit>=1.0.12
+livekit-agents[google,silero,turn-detector]~=1.2
+livekit-plugins-noise-cancellation~=0.2
+python-dotenv>=1.1.1
