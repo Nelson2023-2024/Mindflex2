@@ -9,6 +9,10 @@ import logging
 from livekit import rtc
 import json
 import os
+from datetime import datetime
+
+os.makedirs("./conversations", exist_ok=True)
+os.makedirs("./recommendations", exist_ok=True)
 
 load_dotenv(".env.local")
 
@@ -25,6 +29,7 @@ class Assistant(Agent):
 async def entrypoint(ctx: agents.JobContext):
     session = AgentSession()
     session_mode = "mental"  # default startup mode
+    conversation = []
 
     async def switch_session_mode(mode: str):
         """Switch between mental and physical session modes with smooth acknowledgment."""
@@ -81,14 +86,40 @@ async def entrypoint(ctx: agents.JobContext):
             elif isinstance(content, AudioContent):
                 print(f" - audio: {content.frame}, transcript: {content.transcript}")
 
+        if event.item.role == "assistant":
+            # log assistant replies to file as well
+            logging.info(
+                f"ASSISTANT({event.item.id}): {event.item.text_content} "
+                f"(interrupted={event.item.interrupted})"
+            )
+
+            # store assistant messages (recommendations, answers, etc.)
+            conversation.append({
+                "id": event.item.id,
+                "role": event.item.role,
+                "text": event.item.text_content,
+                "interrupted": event.item.interrupted,
+                "created_at": event.item.created_at,
+            })
+        else:
+            # store user messages/responses
+            conversation.append({
+                "id": event.item.id,
+                "role": event.item.role,
+                "text": event.item.text_content,
+                "interrupted": event.item.interrupted,
+                "created_at": event.item.created_at,
+            })
+
     # Handle incoming data (typed chat messages)
     def on_data_received_sync(data: rtc.DataPacket):
         asyncio.create_task(on_data_received_async(data))
 
     async def on_data_received_async(data: rtc.DataPacket):
         try:
+            global message_data
             message_data = json.loads(data.data.decode('utf-8'))
-            logging.info(f"Received data: {message_data}")
+            logging.info(f"Received data: {message_data["message"]}")
 
             # Handle typed chat messages - DON'T echo them back
             if message_data.get('type') == 'chat':
@@ -121,6 +152,7 @@ async def entrypoint(ctx: agents.JobContext):
         room_input_options=RoomInputOptions(
             video_enabled=True,
             noise_cancellation=noise_cancellation.BVC(),
+            close_on_disconnect=False,
         ),
     )
 
@@ -128,6 +160,29 @@ async def entrypoint(ctx: agents.JobContext):
     await session.generate_reply(
         instructions=MENTAL_SESSION_INSTRUCTION
     )
+    
+    @ctx.room.on("disconnected")
+    def on_room_disconnected():
+        asyncio.create_task(handle_room_disconnected())
+
+    async def handle_room_disconnected():
+        try:
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            try:
+                room_name = message_data["from"]["engine"]["latestJoinResponse"]["room"]["name"]
+            except Exception:
+                room_name = f"session_{timestamp}"
+
+            conv_file = f'./conversations/{room_name}_{timestamp}.json'
+
+            with open(conv_file, "w") as f:
+                json.dump(conversation, f, indent=2)
+
+
+            logging.info("Session ended, data saved.")
+
+        except Exception as e:
+            logging.error(f"Error in handle_room_disconnected: {e}")
 
 log_dir = "./logs"
 

@@ -790,3 +790,455 @@ DEBUG:livekit.agents:stream closed
 DEBUG:livekit.agents:session closed
 DEBUG:livekit.agents:http_session(): closing the httpclient ctx
 DEBUG:livekit.agents:http_session(): creating a new httpclient ctx
+DEBUG:asyncio:Using proactor: IocpProactor
+DEV:livekit.agents:Watching C:\Users\User\Mindflex2\voice_agent
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:livekit.agents:starting worker
+INFO:livekit.agents:registered worker
+INFO:livekit.agents:received job request
+INFO:livekit.agents:initializing job runner
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:livekit.agents:job runner initialized
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.plugins.google:connecting to Gemini Realtime API...
+DEBUG:livekit.agents:using audio io: `RoomIO` -> `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using transcript io: `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using video io: `RoomIO` > `AgentSession` > (none)
+DEBUG:livekit.agents:start reading stream
+DEBUG:livekit.agents:start reading stream
+INFO:google_genai.live:b'{\n  "setupComplete": {}\n}\n'
+INFO:root:Received data: {'text': 'Hi, I am good.', 'type': 'chat', 'timestamp': 1758457323526}
+INFO:root:User typed: Hi, I am good.
+INFO:root:Received data: {'text': 'Yeah, suggest a topic for me', 'type': 'chat', 'timestamp': 1758457356073}
+INFO:root:User typed: Yeah, suggest a topic for me
+INFO:livekit.agents:received job request
+INFO:livekit.agents:initializing job runner
+INFO:livekit.agents:job runner initialized
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.agents:input stream attached
+WARNING:livekit.agents:Running <Task finished name='Task-550' coro=<AgentSession._update_activity() done, defined at C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\voice\agent_session.py:806> result=None> took too long: 2.48 seconds
+DEBUG:livekit.plugins.google:connecting to Gemini Realtime API...
+DEBUG:livekit.agents:using audio io: `RoomIO` -> `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using transcript io: `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using video io: `RoomIO` > `AgentSession` > (none)
+DEBUG:livekit.agents:start reading stream
+INFO:google_genai.live:b'{\n  "setupComplete": {}\n}\n'
+INFO:root:Received data: {'text': 'Sllep', 'type': 'chat', 'timestamp': 1758457568391}
+INFO:root:User typed: Sllep
+INFO:root:Received data: {'id': 'a1d1149a-24ff-460f-97a9-98f3ad2ce6bf', 'timestamp': 1758457577915, 'message': 'I am good', 'ignoreLegacy': True}
+DEBUG:livekit.agents:stream closed
+INFO:livekit.agents:closing agent session due to participant disconnect (disable via `RoomInputOptions.close_on_disconnect=False`)
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.plugins.google:send task finished.
+DEBUG:livekit.agents:session closed
+DEBUG:livekit.agents:stream closed
+INFO:livekit.agents:closing agent session due to participant disconnect (disable via `RoomInputOptions.close_on_disconnect=False`)
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.plugins.google:send task finished.
+DEBUG:livekit.agents:session closed
+WARNING:livekit:livekit::rtc_engine:453:livekit::rtc_engine - received session close: "signal client closed: \"stream closed\"" UnknownReason Resume
+DEBUG:livekit.agents:shutting down job task
+DEBUG:livekit.agents:http_session(): closing the httpclient ctx
+DEBUG:livekit.agents:job exiting
+DEBUG:livekit.agents:http_session(): creating a new httpclient ctx
+INFO:livekit.agents:received job request
+INFO:livekit.agents:initializing job runner
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:livekit.agents:job runner initialized
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.plugins.google:connecting to Gemini Realtime API...
+DEBUG:livekit.agents:using audio io: `RoomIO` -> `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using transcript io: `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using video io: `RoomIO` > `AgentSession` > (none)
+DEBUG:livekit.agents:start reading stream
+INFO:google_genai.live:b'{\n  "setupComplete": {}\n}\n'
+INFO:livekit.agents:closing agent session due to participant disconnect (disable via `RoomInputOptions.close_on_disconnect=False`)
+DEBUG:livekit.agents:stream closed
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.plugins.google:send task finished.
+DEBUG:livekit.agents:session closed
+INFO:livekit.agents:received job request
+INFO:livekit.agents:initializing job runner
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:livekit.agents:job runner initialized
+WARNING:livekit:livekit::rtc_engine:453:livekit::rtc_engine - received session close: "signal client closed: \"stream closed\"" UnknownReason Resume
+DEBUG:livekit.agents:shutting down job task
+DEBUG:livekit.agents:job exiting
+DEBUG:livekit.agents:http_session(): closing the httpclient ctx
+DEBUG:livekit.agents:http_session(): creating a new httpclient ctx
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.plugins.google:connecting to Gemini Realtime API...
+DEBUG:livekit.agents:using audio io: `RoomIO` -> `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using transcript io: `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using video io: `RoomIO` > `AgentSession` > (none)
+DEBUG:livekit.agents:start reading stream
+INFO:google_genai.live:b'{\n  "setupComplete": {}\n}\n'
+DEBUG:livekit.agents:shutting down job task
+DEBUG:livekit.agents:job exiting
+DEBUG:livekit.agents:http_session(): closing the httpclient ctx
+DEBUG:livekit.agents:http_session(): creating a new httpclient ctx
+DEBUG:livekit.agents:start reading stream
+INFO:root:Received data: {'id': '78bed548-4f57-46c6-8002-93bf963d6f90', 'timestamp': 1758457889551, 'message': 'Can you see my screen?', 'ignoreLegacy': True}
+INFO:root:Received data: {'id': '0f0caeef-4fa6-4504-b211-8eac2b2036c6', 'timestamp': 1758457915884, 'message': 'What do you see on the screen?', 'ignoreLegacy': True}
+INFO:root:Received data: {'id': '2fb0c44e-33a9-4cfd-9205-353325abfeca', 'timestamp': 1758457941159, 'message': 'Do you see the code on the screen?', 'ignoreLegacy': True}
+DEBUG:livekit.agents:start reading stream
+INFO:root:Received data: {'id': 'b4cbf44b-4dea-4cbe-88f1-bc8cc78aef37', 'timestamp': 1758458003925, 'message': 'TEll me what code U see on the screen and what language is used', 'ignoreLegacy': True}
+INFO:root:Received data: {'id': 'a7f1c540-314b-45b3-8b75-05921f2a34c8', 'timestamp': 1758458028683, 'message': 'yes interpret', 'ignoreLegacy': True}
+INFO:root:Received data: {'id': 'a9e4e61c-26ba-41e1-a8c8-e27df987a3ce', 'timestamp': 1758458100606, 'message': 'I have changed the screen, what is the language being used now?', 'ignoreLegacy': True}
+DEBUG:livekit.agents:stream closed
+INFO:livekit.agents:closing agent session due to participant disconnect (disable via `RoomInputOptions.close_on_disconnect=False`)
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.plugins.google:send task finished.
+DEBUG:livekit.agents:session closed
+WARNING:livekit:livekit::rtc_engine:453:livekit::rtc_engine - received session close: "signal client closed: \"stream closed\"" UnknownReason Resume
+DEBUG:livekit.agents:shutting down job task
+DEBUG:livekit.agents:http_session(): closing the httpclient ctx
+DEBUG:livekit.agents:http_session(): creating a new httpclient ctx
+DEBUG:livekit.agents:job exiting
+INFO:livekit.agents:shutting down worker
+DEBUG:asyncio:Using proactor: IocpProactor
+DEV:livekit.agents:Watching C:\Users\User\Mindflex2\voice_agent
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:livekit.agents:starting worker
+INFO:livekit.agents:registered worker
+INFO:livekit.agents:received job request
+INFO:livekit.agents:initializing job runner
+INFO:livekit.agents:job runner initialized
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.plugins.google:connecting to Gemini Realtime API...
+DEBUG:livekit.agents:start reading stream
+DEBUG:livekit.agents:using audio io: `RoomIO` -> `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using transcript io: `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using video io: `RoomIO` > `AgentSession` > (none)
+DEBUG:livekit.agents:start reading stream
+INFO:google_genai.live:b'{\n  "setupComplete": {}\n}\n'
+INFO:root:Received data: {'id': '34c188ba-6d57-47cf-8c72-14503d18c970', 'timestamp': 1758460370792, 'message': 'I am good.', 'ignoreLegacy': True}
+INFO:root:USER(None): Hello. Hi. (lang=None, final=False)
+INFO:root:USER(None): Hello. Hi. (lang=None, final=True)
+INFO:root:USER(None): próximo. (lang=None, final=False)
+INFO:root:USER(None): próximo. (lang=None, final=True)
+INFO:root:Received data: {'id': 'da725fcd-9b03-4d42-ac4f-a2f03313e4e1', 'timestamp': 1758460472007, 'message': 'mental', 'ignoreLegacy': True}
+DEBUG:livekit.agents:stream closed
+INFO:livekit.agents:closing agent session due to participant disconnect (disable via `RoomInputOptions.close_on_disconnect=False`)
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.plugins.google:send task finished.
+DEBUG:livekit.agents:session closed
+DEBUG:livekit.agents:shutting down job task
+DEBUG:livekit.agents:job exiting
+DEBUG:livekit.agents:http_session(): closing the httpclient ctx
+DEBUG:livekit.agents:http_session(): creating a new httpclient ctx
+INFO:livekit.agents:shutting down worker
+DEBUG:asyncio:Using proactor: IocpProactor
+DEV:livekit.agents:Watching C:\Users\User\Mindflex2\voice_agent
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:livekit.agents:starting worker
+INFO:livekit.agents:registered worker
+INFO:livekit.agents:shutting down worker
+DEBUG:asyncio:Using proactor: IocpProactor
+DEV:livekit.agents:Watching C:\Users\User\Mindflex2\voice_agent
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:livekit.agents:starting worker
+INFO:livekit.agents:registered worker
+INFO:livekit.agents:shutting down worker
+DEBUG:asyncio:Using proactor: IocpProactor
+DEV:livekit.agents:Watching C:\Users\User\Mindflex2\voice_agent
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:livekit.agents:starting worker
+INFO:livekit.agents:registered worker
+INFO:livekit.agents:shutting down worker
+DEBUG:asyncio:Using proactor: IocpProactor
+DEV:livekit.agents:Watching C:\Users\User\Mindflex2\voice_agent
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:livekit.agents:starting worker
+INFO:livekit.agents:registered worker
+INFO:livekit.agents:received job request
+INFO:livekit.agents:initializing job runner
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:livekit.agents:job runner initialized
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.plugins.google:connecting to Gemini Realtime API...
+DEBUG:livekit.agents:using audio io: `RoomIO` -> `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using transcript io: `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using video io: `RoomIO` > `AgentSession` > (none)
+DEBUG:livekit.agents:start reading stream
+DEBUG:livekit.agents:start reading stream
+INFO:google_genai.live:b'{\n  "setupComplete": {}\n}\n'
+INFO:livekit.agents:closing agent session due to participant disconnect (disable via `RoomInputOptions.close_on_disconnect=False`)
+DEBUG:livekit.agents:stream closed
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.plugins.google:send task finished.
+DEBUG:livekit.agents:session closed
+WARNING:livekit:livekit::rtc_engine:453:livekit::rtc_engine - received session close: "signal client closed: \"stream closed\"" UnknownReason Resume
+DEBUG:livekit.agents:shutting down job task
+DEBUG:livekit.agents:job exiting
+DEBUG:livekit.agents:http_session(): closing the httpclient ctx
+DEBUG:livekit.agents:http_session(): creating a new httpclient ctx
+INFO:livekit.agents:received job request
+INFO:livekit.agents:initializing job runner
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:livekit.agents:job runner initialized
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.plugins.google:connecting to Gemini Realtime API...
+DEBUG:livekit.agents:using audio io: `RoomIO` -> `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using transcript io: `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using video io: `RoomIO` > `AgentSession` > (none)
+DEBUG:livekit.agents:start reading stream
+DEBUG:livekit.agents:start reading stream
+INFO:google_genai.live:b'{\n  "setupComplete": {}\n}\n'
+DEBUG:livekit.agents:stream closed
+INFO:livekit.agents:closing agent session due to participant disconnect (disable via `RoomInputOptions.close_on_disconnect=False`)
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.plugins.google:send task finished.
+DEBUG:livekit.agents:session closed
+WARNING:livekit:livekit::rtc_engine:453:livekit::rtc_engine - received session close: "signal client closed: \"stream closed\"" UnknownReason Resume
+DEBUG:livekit.agents:shutting down job task
+DEBUG:livekit.agents:http_session(): closing the httpclient ctx
+DEBUG:livekit.agents:job exiting
+DEBUG:livekit.agents:http_session(): creating a new httpclient ctx
+INFO:livekit.agents:received job request
+INFO:livekit.agents:initializing job runner
+INFO:livekit.agents:job runner initialized
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.plugins.google:connecting to Gemini Realtime API...
+DEBUG:livekit.agents:using audio io: `RoomIO` -> `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using transcript io: `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using video io: `RoomIO` > `AgentSession` > (none)
+DEBUG:livekit.agents:start reading stream
+DEBUG:livekit.agents:start reading stream
+INFO:google_genai.live:b'{\n  "setupComplete": {}\n}\n'
+INFO:livekit.agents:received job request
+INFO:livekit.agents:initializing job runner
+INFO:livekit.agents:job runner initialized
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.agents:input stream attached
+WARNING:livekit.agents:Running <Task finished name='Task-344' coro=<AgentSession._update_activity() done, defined at C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\voice\agent_session.py:806> result=None> took too long: 2.39 seconds
+DEBUG:livekit.plugins.google:connecting to Gemini Realtime API...
+DEBUG:livekit.agents:using audio io: `RoomIO` -> `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using transcript io: `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using video io: `RoomIO` > `AgentSession` > (none)
+DEBUG:livekit.agents:start reading stream
+INFO:google_genai.live:b'{\n  "setupComplete": {}\n}\n'
+INFO:livekit.agents:closing agent session due to participant disconnect (disable via `RoomInputOptions.close_on_disconnect=False`)
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.plugins.google:send task finished.
+DEBUG:livekit.agents:stream closed
+DEBUG:livekit.agents:session closed
+DEBUG:livekit.agents:shutting down job task
+DEBUG:livekit.agents:http_session(): closing the httpclient ctx
+DEBUG:livekit.agents:job exiting
+DEBUG:livekit.agents:http_session(): creating a new httpclient ctx
+INFO:root:Received data: {'id': '85ac6a7d-f9f8-496d-a3f7-f53ec8b41638', 'timestamp': 1758461271983, 'message': 'hi', 'ignoreLegacy': True}
+INFO:root:USER(None): Can you see me? (lang=None, final=False)
+INFO:root:USER(None): Can you see me? (lang=None, final=True)
+INFO:root:USER(None): WHA (lang=None, final=False)
+INFO:root:USER(None): WHAT COLOUR SHARTER MAY YOU IN (lang=None, final=False)
+INFO:root:USER(None): WHAT COLOUR SHARTER MAY YOU IN (lang=None, final=True)
+INFO:root:USER(None): How (lang=None, final=False)
+INFO:root:USER(None): How many fi (lang=None, final=False)
+INFO:root:USER(None): How many fingers am I holding now? (lang=None, final=False)
+INFO:root:USER(None): How many fingers am I holding now? (lang=None, final=True)
+INFO:root:USER(None): And now (lang=None, final=False)
+INFO:root:USER(None): And now (lang=None, final=True)
+WARNING:livekit.plugins.google:truncate is not supported by the Google Realtime API.
+INFO:root:USER(None): \u0d0e\u0d28\u0d4d\u0d24\u0d3e\u0d23\u0d4d? (lang=None, final=False)
+INFO:root:USER(None): \u0d0e\u0d28\u0d4d\u0d24\u0d3e\u0d23\u0d4d? (lang=None, final=True)
+DEBUG:livekit.agents:stream closed
+INFO:livekit.agents:closing agent session due to participant disconnect (disable via `RoomInputOptions.close_on_disconnect=False`)
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.plugins.google:send task finished.
+DEBUG:livekit.agents:session closed
+WARNING:livekit:livekit::rtc_engine:453:livekit::rtc_engine - received session close: "signal client closed: \"stream closed\"" UnknownReason Resume
+DEBUG:livekit.agents:shutting down job task
+DEBUG:livekit.agents:job exiting
+DEBUG:livekit.agents:http_session(): closing the httpclient ctx
+DEBUG:livekit.agents:http_session(): creating a new httpclient ctx
+INFO:livekit.agents:shutting down worker
+DEBUG:asyncio:Using proactor: IocpProactor
+DEV:livekit.agents:Watching C:\Users\User\Mindflex2\voice_agent
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:livekit.agents:starting worker
+INFO:livekit.agents:registered worker
+INFO:livekit.agents:received job request
+INFO:livekit.agents:initializing job runner
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:livekit.agents:job runner initialized
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.agents:input stream attached
+WARNING:livekit.agents:Running <Task finished name='Task-31' coro=<AgentSession._update_activity() done, defined at C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\voice\agent_session.py:806> result=None> took too long: 2.11 seconds
+DEBUG:livekit.plugins.google:connecting to Gemini Realtime API...
+DEBUG:livekit.agents:start reading stream
+DEBUG:livekit.agents:start reading stream
+DEBUG:livekit.agents:using audio io: `RoomIO` -> `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using transcript io: `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using video io: `RoomIO` > `AgentSession` > (none)
+INFO:google_genai.live:b'{\n  "setupComplete": {}\n}\n'
+INFO:root:Received data: {'id': '5b629777-a398-4d08-96c1-f7152c92f519', 'timestamp': 1758542065913, 'message': 'I am good, you?', 'ignoreLegacy': True}
+WARNING:livekit.plugins.google:Gemini server indicates disconnection soon. Time left: 50s
+DEBUG:livekit.plugins.google:send task finished.
+DEBUG:livekit.plugins.google:connecting to Gemini Realtime API...
+INFO:google_genai.live:b'{\n  "setupComplete": {}\n}\n'
+DEBUG:livekit.agents:stream closed
+INFO:livekit.agents:closing agent session due to participant disconnect (disable via `RoomInputOptions.close_on_disconnect=False`)
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.plugins.google:send task finished.
+DEBUG:livekit.agents:session closed
+DEBUG:livekit.agents:shutting down job task
+WARNING:livekit:livekit::rtc_engine:453:livekit::rtc_engine - received session close: "signal client closed: \"stream closed\"" UnknownReason Resume
+DEBUG:livekit.agents:job exiting
+DEBUG:livekit.agents:http_session(): closing the httpclient ctx
+DEBUG:livekit.agents:http_session(): creating a new httpclient ctx
+WARNING:livekit.agents:failed to connect to livekit, retrying in 0s
+Traceback (most recent call last):
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\worker.py", line 689, in _connection_task
+    await self._run_ws(ws)
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\worker.py", line 770, in _run_ws
+    await asyncio.gather(*tasks)
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\worker.py", line 742, in _recv_task
+    raise Exception("worker connection closed unexpectedly")
+Exception: worker connection closed unexpectedly
+INFO:livekit.agents:registered worker
+DEBUG:asyncio:Using proactor: IocpProactor
+DEV:livekit.agents:Watching C:\Users\User\Mindflex2\voice_agent
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:livekit.agents:starting worker
+INFO:livekit.agents:registered worker
+INFO:livekit.agents:received job request
+INFO:livekit.agents:initializing job runner
+INFO:livekit.agents:job runner initialized
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.plugins.google:connecting to Gemini Realtime API...
+DEBUG:livekit.agents:start reading stream
+DEBUG:livekit.agents:start reading stream
+DEBUG:livekit.agents:using audio io: `RoomIO` -> `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using transcript io: `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using video io: `RoomIO` > `AgentSession` > (none)
+INFO:google_genai.live:b'{\n  "setupComplete": {}\n}\n'
+INFO:root:Received data: {'id': 'e80b348e-9fe8-43c3-b868-15611acad5a8', 'timestamp': 1758640749632, 'message': 'am depressed', 'ignoreLegacy': True}
+INFO:root:USER(None): Nikisema hivyo. (lang=None, final=False)
+INFO:root:USER(None): Nikisema hivyo. (lang=None, final=True)
+INFO:root:Received data: {'id': 'f691c415-d86f-4bc7-8420-1d341bbf6d6a', 'timestamp': 1758640776180, 'message': "i  don't know", 'ignoreLegacy': True}
+INFO:root:Received data: {'id': '3964eba5-dea8-4754-9686-2c18f64dcce6', 'timestamp': 1758640789147, 'message': 'yes', 'ignoreLegacy': True}
+INFO:root:USER(None): . (lang=None, final=False)
+WARNING:livekit.plugins.google:truncate is not supported by the Google Realtime API.
+INFO:root:Received data: {'id': '116ea383-ac45-480b-a28d-b534b7f9bd56', 'timestamp': 1758640806189, 'message': 'no', 'ignoreLegacy': True}
+INFO:root:USER(None): . (lang=None, final=True)
+INFO:root:Received data: {'id': '3e557881-09f0-4c24-90c2-7007957910b7', 'timestamp': 1758640818349, 'message': 'am sick', 'ignoreLegacy': True}
+INFO:root:Received data: {'id': '23677889-e8e7-498c-9dd6-284437635a1d', 'timestamp': 1758640838241, 'message': 'headache', 'ignoreLegacy': True}
+INFO:root:USER(None): . Umetumia twende. (lang=None, final=False)
+INFO:root:USER(None): . Umetumia twende. (lang=None, final=True)
+WARNING:livekit.plugins.silero:inference is slower than realtime
+WARNING:livekit.plugins.silero:inference is slower than realtime
+INFO:livekit.agents:shutting down worker
+DEBUG:livekit.agents:shutting down job task
+DEBUG:livekit.agents:job exiting
+DEBUG:livekit.agents:stream closed
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.plugins.google:send task finished.
+DEBUG:livekit.agents:session closed
+DEBUG:livekit.agents:http_session(): closing the httpclient ctx
+DEBUG:livekit.agents:http_session(): creating a new httpclient ctx
+DEBUG:asyncio:Using proactor: IocpProactor
+DEV:livekit.agents:Watching C:\Users\User\Mindflex2\voice_agent
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:livekit.agents:starting worker
+INFO:livekit.agents:registered worker
+INFO:livekit.agents:received job request
+INFO:livekit.agents:initializing job runner
+INFO:livekit.agents:job runner initialized
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.plugins.google:connecting to Gemini Realtime API...
+DEBUG:livekit.agents:start reading stream
+DEBUG:livekit.agents:using audio io: `RoomIO` -> `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using transcript io: `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using video io: `RoomIO` > `AgentSession` > (none)
+INFO:google_genai.live:b'{\n  "setupComplete": {}\n}\n'
+INFO:root:ASSISTANT(GR_14c712e89d56): Good day! I'm MindFlex, your dedicated wellness assistant. How may I be of service to your wellbeing today?
+ (interrupted=False)
+INFO:root:Received data: {'id': 'a2d8ec47-54de-4fd8-b9c7-106ecdbc797c', 'timestamp': 1758739922616, 'message': 'hi', 'from': {'_events': {'trackMuted': [None, None, None, None, None, None, None], 'trackUnmuted': [None, None, None, None, None, None, None], 'participantPermissionsChanged': [None, None, None, None, None, None, None], 'trackPublished': [None, None, None, None, None, None], 'trackUnpublished': [None, None, None, None, None, None], 'localTrackPublished': [None, None, None, None, None, None, None], 'localTrackUnpublished': [None, None, None, None, None, None, None], 'mediaDevicesError': [None, None, None, None, None, None, None], 'trackSubscriptionStatusChanged': [None, None, None, None, None, None]}, '_eventsCount': 15, '_maxListeners': 100, 'audioLevel': 0, 'isSpeaking': False, '_connectionQuality': 'excellent', 'log': {'name': 'livekit-participant', 'levels': {'TRACE': 0, 'DEBUG': 1, 'INFO': 2, 'WARN': 3, 'ERROR': 4, 'SILENT': 5}}, 'loggerOptions': {}, 'sid': 'PA_9Lnzw74yaTsw', 'identity': 'identity-BgPZ', 'name': '', 'metadata': '', 'audioTrackPublications': {}, 'videoTrackPublications': {}, 'trackPublications': {}, '_kind': 0, '_attributes': {}, 'pendingPublishing': {}, 'pendingPublishPromises': {}, 'participantTrackPermissions': [], 'allParticipantsAllowedToSubscribe': True, 'encryptionType': 0, 'enabledPublishVideoCodecs': [{'mime': 'video/VP8', 'fmtpLine': ''}, {'mime': 'video/H264', 'fmtpLine': ''}, {'mime': 'video/VP9', 'fmtpLine': ''}, {'mime': 'video/AV1', 'fmtpLine': ''}, {'mime': 'video/H265', 'fmtpLine': ''}], 'pendingAcks': {}, 'pendingResponses': {}, 'engine': {'_events': {'disconnected': [None, None], 'dataPacketReceived': [None, None], 'resuming': [None, None], 'signalResumed': [None, None], 'restarting': [None, None], 'signalRestarted': [None, None]}, '_eventsCount': 24, 'options': {'adaptiveStream': False, 'dynacast': False, 'stopLocalTrackOnUnpublish': True, 'reconnectPolicy': {'_retryDelays': [0, 300, 1200, 2700, 4800, 7000, 7000, 7000, 7000, 7000]}, 'disconnectOnPageLeave': True, 'webAudioMix': False, 'audioCaptureDefaults': {'deviceId': {'ideal': 'default'}, 'autoGainControl': True, 'echoCancellation': True, 'noiseSuppression': True, 'voiceIsolation': True}, 'videoCaptureDefaults': {'deviceId': {'ideal': 'default'}, 'resolution': {'width': 1280, 'height': 720, 'frameRate': 30, 'aspectRatio': 1.7777777777777777}}, 'publishDefaults': {'audioPreset': {'maxBitrate': 48000}, 'dtx': True, 'red': True, 'forceStereo': False, 'simulcast': True, 'screenShareEncoding': {'maxBitrate': 2500000, 'maxFramerate': 15, 'priority': 'medium'}, 'stopMicTrackOnMute': False, 'videoCodec': 'vp8', 'backupCodec': True}}, 'rtcConfig': {}, 'peerConnectionTimeout': 15000, 'fullReconnectOnNext': False, 'subscriberPrimary': True, 'pcState': 1, '_isClosed': False, 'pendingTrackResolvers': {}, 'reconnectAttempts': 0, 'reconnectStart': 0, 'attemptingReconnect': False, 'joinAttempts': 1, 'maxJoinAttempts': 1, 'shouldFailNext': False, 'log': {'name': 'livekit-engine', 'levels': {'TRACE': 0, 'DEBUG': 1, 'INFO': 2, 'WARN': 3, 'ERROR': 4, 'SILENT': 5}}, 'loggerOptions': {}, 'client': {'rtt': 204, 'state': 1, 'log': {'name': 'livekit-signal', 'levels': {'TRACE': 0, 'DEBUG': 1, 'INFO': 2, 'WARN': 3, 'ERROR': 4, 'SILENT': 5}}, '_requestId': 0, 'useJSON': False, 'requestQueue': {'pendingTasks': {}, 'taskMutex': {'_locking': {}, '_locks': 0}, 'nextTaskIndex': 27}, 'queuedRequests': [], 'closingLock': {'_locking': {}, '_locks': 0}, 'connectionLock': {'_locking': {}, '_locks': 0}, 'options': {'autoSubscribe': True, 'adaptiveStream': False, 'maxRetries': 1, 'e2eeEnabled': False, 'websocketTimeout': 15000}, 'connectOptions': {'autoSubscribe': True, 'adaptiveStream': False, 'maxRetries': 1, 'e2eeEnabled': False, 'websocketTimeout': 15000}, 'ws': {}, 'pingTimeoutDuration': 15, 'pingIntervalDuration': 5, 'pingTimeout': 297, 'pingInterval': 127}, 'reconnectPolicy': {'_retryDelays': [0, 300, 1200, 2700, 4800, 7000, 7000, 7000, 7000, 7000]}, 'closingLock': {'_locking': {}, '_locks': 0}, 'dataProcessLock': {'_locking': {}, '_locks': 0}, 'dcBufferStatus': {}, 'regionUrlProvider': {'lastUpdateAt': 1758739906794, 'settingsCacheTime': 3000, 'attemptedRegions': [], 'serverUrl': 'wss://mindflex-xawp7he1.livekit.cloud/', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTg3NjE1MDcsImlkZW50aXR5IjoiaWRlbnRpdHktQmdQWiIsImlzcyI6IkFQSUUyaU1RMmp6SE5FciIsIm5iZiI6MTc1ODczOTkwNywic3ViIjoiaWRlbnRpdHktQmdQWiIsInZpZGVvIjp7ImNhblB1Ymxpc2giOnRydWUsImNhblB1Ymxpc2hEYXRhIjp0cnVlLCJjYW5TdWJzY3JpYmUiOnRydWUsInJvb20iOiJwbGF5Z3JvdW5kLVJ4dXMtWjNXdCIsInJvb21Kb2luIjp0cnVlfX0.DSjZMZdOkO7ls8-lpvv4fSJuUkN7-G-RkEwhfVhnm6g', 'regionSettings': {'regions': [{'region': 'ojeddah1a', 'url': 'https://mindflex-xawp7he1.ojeddah1a.production.livekit.cloud', 'distance': '2549532'}, {'region': 'ojohannesburg1a', 'url': 'https://mindflex-xawp7he1.ojohannesburg1a.production.livekit.cloud', 'distance': '2929930'}, {'region': 'odubai1a', 'url': 'https://mindflex-xawp7he1.odubai1a.production.livekit.cloud', 'distance': '3558093'}]}}, 'url': 'wss://mindflex-xawp7he1.livekit.cloud', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTg3NDA1MDgsImlkZW50aXR5IjoiaWRlbnRpdHktQmdQWiIsImlzcyI6IkFQSUUyaU1RMmp6SE5FciIsImtpbmQiOiJzdGFuZGFyZCIsIm5iZiI6MTc1ODczOTkwOCwic3ViIjoiaWRlbnRpdHktQmdQWiIsInZpZGVvIjp7ImNhblB1Ymxpc2giOnRydWUsImNhblB1Ymxpc2hEYXRhIjp0cnVlLCJjYW5TdWJzY3JpYmUiOnRydWUsInJvb20iOiJwbGF5Z3JvdW5kLVJ4dXMtWjNXdCIsInJvb21Kb2luIjp0cnVlfX0.VUeA4HLJrx6SBEcPEg472ip6lgKiXZ-uGFh7NRD3obc', 'signalOpts': {'autoSubscribe': True, 'adaptiveStream': False, 'maxRetries': 1, 'e2eeEnabled': False, 'websocketTimeout': 15000}, 'latestJoinResponse': {'room': {'sid': '', 'name': 'playground-Rxus-Z3Wt', 'emptyTimeout': 300, 'maxParticipants': 0, 'creationTime': '1758739908', 'turnPassword': '', 'enabledCodecs': [{'mime': 'video/H264', 'fmtpLine': ''}, {'mime': 'video/VP8', 'fmtpLine': ''}, {'mime': 'video/VP9', 'fmtpLine': ''}, {'mime': 'video/AV1', 'fmtpLine': ''}, {'mime': 'audio/red', 'fmtpLine': ''}, {'mime': 'audio/opus', 'fmtpLine': ''}], 'metadata': '', 'numParticipants': 0, 'activeRecording': False, 'numPublishers': 0, 'version': {'unixMicro': '943920000000000', 'ticks': 0}, 'departureTimeout': 20, 'creationTimeMs': '1758739908439'}, 'participant': {'sid': 'PA_9Lnzw74yaTsw', 'identity': 'identity-BgPZ', 'state': 'JOINING', 'tracks': [], 'metadata': '', 'joinedAt': '1758739908', 'name': '', 'version': 0, 'permission': {'canSubscribe': True, 'canPublish': True, 'canPublishData': True, 'hidden': False, 'recorder': False, 'canPublishSources': [], 'canUpdateMetadata': False, 'agent': False, 'canSubscribeMetrics': False}, 'region': 'ojeddah1a', 'isPublisher': False, 'kind': 'STANDARD', 'attributes': {}, 'disconnectReason': 'UNKNOWN_REASON', 'joinedAtMs': '1758739908527', 'kindDetails': []}, 'otherParticipants': [], 'serverVersion': '1.9.1', 'iceServers': [{'urls': ['turn:ip-193-122-83-68.host.livekit.cloud:3478?transport=udp', 'turns:ojeddah1a.turn.livekit.cloud:443?transport=tcp', 'turns:mindflex-xawp7he1.turn.livekit.cloud:443?transport=tcp'], 'username': '3NHVhlHN3cnecjpceVQQxncF5ES6pmMR1UayUUSQFE', 'credential': 'CLSEuEKUyKWnYRB3FS9RRafXHStQ6mVsMF2pSl9ewBfB'}], 'subscriberPrimary': True, 'alternativeUrl': '', 'serverRegion': 'Saudi Arabia', 'pingTimeout': 15, 'pingInterval': 5, 'serverInfo': {'edition': 'Cloud', 'version': '1.9.1', 'protocol': 16, 'region': 'Saudi Arabia', 'nodeId': 'NM_OJEDDAH1A_XoqtC2NpfpkR', 'debugInfo': '', 'agentProtocol': 0}, 'sifTrailer': 'HZ84GpFfDUk=', 'enabledPublishCodecs': [{'mime': 'video/VP8', 'fmtpLine': ''}, {'mime': 'video/H264', 'fmtpLine': ''}, {'mime': 'video/VP9', 'fmtpLine': ''}, {'mime': 'video/AV1', 'fmtpLine': ''}, {'mime': 'video/H265', 'fmtpLine': ''}, {'mime': 'audio/red', 'fmtpLine': ''}, {'mime': 'audio/opus', 'fmtpLine': ''}], 'fastPublish': True}, 'participantSid': 'PA_9Lnzw74yaTsw', 'pcManager': {'peerConnectionTimeout': 15000, 'log': {'name': 'livekit-pc-manager', 'levels': {'TRACE': 0, 'DEBUG': 1, 'INFO': 2, 'WARN': 3, 'ERROR': 4, 'SILENT': 5}}, 'loggerOptions': {}, 'isPublisherConnectionRequired': True, 'isSubscriberConnectionRequired': True, 'publisher': {'_events': {'rtpVideoPayloadTypes': [None, None]}, '_eventsCount': 1, 'log': {'name': 'livekit-pc-transport', 'levels': {'TRACE': 0, 'DEBUG': 1, 'INFO': 2, 'WARN': 3, 'ERROR': 4, 'SILENT': 5}}, 'ddExtID': 0, 'pendingCandidates': [], 'restartingIce': False, 'renegotiate': False, 'trackBitrates': [], 'remoteStereoMids': [], 'remoteNackMids': [], 'loggerOptions': {}, 'config': {'iceServers': [{'urls': ['turn:ip-193-122-83-68.host.livekit.cloud:3478?transport=udp', 'turns:ojeddah1a.turn.livekit.cloud:443?transport=tcp', 'turns:mindflex-xawp7he1.turn.livekit.cloud:443?transport=tcp'], 'username': '3NHVhlHN3cnecjpceVQQxncF5ES6pmMR1UayUUSQFE', 'credential': 'CLSEuEKUyKWnYRB3FS9RRafXHStQ6mVsMF2pSl9ewBfB'}], 'sdpSemantics': 'unified-plan', 'continualGatheringPolicy': 'gather_continually'}, '_pc': {'_eventMap': {'datachannel': {}, 'track': {}}, '_sctp': {}}}, 'subscriber': {'_events': {}, '_eventsCount': 0, 'log': {'name': 'livekit-pc-transport', 'levels': {'TRACE': 0, 'DEBUG': 1, 'INFO': 2, 'WARN': 3, 'ERROR': 4, 'SILENT': 5}}, 'ddExtID': 0, 'pendingCandidates': [], 'restartingIce': False, 'renegotiate': False, 'trackBitrates': [], 'remoteStereoMids': [], 'remoteNackMids': [], 'loggerOptions': {}, 'config': {'iceServers': [{'urls': ['turn:ip-193-122-83-68.host.livekit.cloud:3478?transport=udp', 'turns:ojeddah1a.turn.livekit.cloud:443?transport=tcp', 'turns:mindflex-xawp7he1.turn.livekit.cloud:443?transport=tcp'], 'username': '3NHVhlHN3cnecjpceVQQxncF5ES6pmMR1UayUUSQFE', 'credential': 'CLSEuEKUyKWnYRB3FS9RRafXHStQ6mVsMF2pSl9ewBfB'}], 'sdpSemantics': 'unified-plan', 'continualGatheringPolicy': 'gather_continually'}, '_pc': {'_eventMap': {'datachannel': {}, 'track': {}}, '_sctp': {}}}, 'state': 2, 'connectionLock': {'_locking': {}, '_locks': 0}, 'remoteOfferLock': {'_locking': {}, '_locks': 0}}, 'lossyDC': {}, 'reliableDC': {}, 'reliableDCSub': {}, 'lossyDCSub': {}, 'publisherConnectionPromise': {}}, 'roomOptions': {'adaptiveStream': False, 'dynacast': False, 'stopLocalTrackOnUnpublish': True, 'reconnectPolicy': {'_retryDelays': [0, 300, 1200, 2700, 4800, 7000, 7000, 7000, 7000, 7000]}, 'disconnectOnPageLeave': True, 'webAudioMix': False, 'audioCaptureDefaults': {'deviceId': {'ideal': 'default'}, 'autoGainControl': True, 'echoCancellation': True, 'noiseSuppression': True, 'voiceIsolation': True}, 'videoCaptureDefaults': {'deviceId': {'ideal': 'default'}, 'resolution': {'width': 1280, 'height': 720, 'frameRate': 30, 'aspectRatio': 1.7777777777777777}}, 'publishDefaults': {'audioPreset': {'maxBitrate': 48000}, 'dtx': True, 'red': True, 'forceStereo': False, 'simulcast': True, 'screenShareEncoding': {'maxBitrate': 2500000, 'maxFramerate': 15, 'priority': 'medium'}, 'stopMicTrackOnMute': False, 'videoCodec': 'vp8', 'backupCodec': True}}, 'activeDeviceMap': {}, 'pendingSignalRequests': {}, 'rpcHandlers': {}, 'audioContext': {}, 'permissions': {'canSubscribe': True, 'canPublish': True, 'canPublishData': True, 'hidden': False, 'recorder': False, 'canPublishSources': [], 'canUpdateMetadata': False, 'agent': False, 'canSubscribeMetrics': False}, 'participantInfo': {'sid': 'PA_9Lnzw74yaTsw', 'identity': 'identity-BgPZ', 'state': 'ACTIVE', 'tracks': [{'sid': 'TR_AMgTL5VPeerczD', 'type': 'AUDIO', 'name': '', 'muted': False, 'width': 0, 'height': 0, 'simulcast': False, 'disableDtx': False, 'source': 'MICROPHONE', 'layers': [], 'mimeType': 'audio/red', 'mid': '1', 'codecs': [{'mimeType': 'audio/red', 'mid': '1', 'cid': 'cdcbeed5-eba7-4ee1-a0c0-7da625ce131d', 'layers': []}], 'stereo': False, 'disableRed': False, 'encryption': 'NONE', 'stream': 'camera', 'version': {'unixMicro': '1758739911273557', 'ticks': 0}, 'audioFeatures': [], 'backupCodecPolicy': 'PREFER_REGRESSION'}], 'metadata': '', 'joinedAt': '1758739908', 'name': '', 'version': 4, 'permission': {'canSubscribe': True, 'canPublish': True, 'canPublishData': True, 'hidden': False, 'recorder': False, 'canPublishSources': [], 'canUpdateMetadata': False, 'agent': False, 'canSubscribeMetrics': False}, 'region': 'ojeddah1a', 'isPublisher': True, 'kind': 'STANDARD', 'attributes': {}, 'disconnectReason': 'UNKNOWN_REASON', 'joinedAtMs': '1758739908527', 'kindDetails': []}, 'cameraError': {}}, 'ignoreLegacy': True}
+INFO:root:ASSISTANT(GR_126ceb27438d): Hi there! How are you feeling in your mind and body today?
+ (interrupted=False)
+INFO:root:ASSISTANT(GR_8a5922e6c39d): Thank you for sharing. Would you like to tell me more about what's going on?
+ (interrupted=False)
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:livekit.agents:starting worker
+ERROR:livekit.agents:Error in _read_ipc_task
+Traceback (most recent call last):
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\utils\aio\duplex_unix.py", line 35, in recv_bytes
+    len_bytes = await self._reader.readexactly(4)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\asyncio\streams.py", line 750, in readexactly
+    raise exceptions.IncompleteReadError(incomplete, n)
+asyncio.exceptions.IncompleteReadError: 0 bytes read on a total of 4 expected bytes
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\utils\log.py", line 16, in async_fn_logs
+    return await fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\cli\watcher.py", line 120, in _read_ipc_task
+    msg = await channel.arecv_message(self._pch, proto.IPC_MESSAGES)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\ipc\channel.py", line 47, in arecv_message
+    return _read_message(await dplx.recv_bytes(), messages)
+                         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Mindflex2\.venv\Lib\site-packages\livekit\agents\utils\aio\duplex_unix.py", line 43, in recv_bytes
+    raise DuplexClosed() from e
+livekit.agents.utils.aio.duplex_unix.DuplexClosed
+INFO:livekit.agents:registered worker
+INFO:livekit.agents:received job request
+INFO:livekit.agents:initializing job runner
+INFO:livekit.agents:job runner initialized
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.plugins.google:connecting to Gemini Realtime API...
+DEBUG:livekit.agents:start reading stream
+DEBUG:livekit.agents:using audio io: `RoomIO` -> `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using transcript io: `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using video io: `RoomIO` > `AgentSession` > (none)
+INFO:google_genai.live:b'{\n  "setupComplete": {}\n}\n'
+INFO:root:ASSISTANT(GR_d8173d460846): Good day! I'm MindFlex, your dedicated wellness assistant. How may I be of service to your wellbeing today?
+ (interrupted=False)
+INFO:root:Received data: hi
+INFO:root:ASSISTANT(GR_ef0c721f46cf): Hi there! How are you feeling in your mind and body today?
+ (interrupted=False)
+INFO:root:ASSISTANT(GR_82d7511431f9): Thank you for sharing. Would you like to tell me more about what's going on?
+ (interrupted=False)
+DEBUG:livekit.agents:stream closed
+INFO:root:Session ended, data saved.
+DEBUG:livekit.agents:shutting down job task
+DEBUG:livekit.agents:job exiting
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.plugins.google:send task finished.
+DEBUG:livekit.agents:session closed
+DEBUG:livekit.agents:http_session(): closing the httpclient ctx
+DEBUG:livekit.agents:http_session(): creating a new httpclient ctx
+INFO:livekit.agents:shutting down worker
